@@ -1,6 +1,15 @@
 # README
 
-## 下载图片
+关于网评员专用app记事本的介绍，请参考
+
+https://hackmd.io/@g_aydPBHS1m5-pMA-nIfjw/HkXzPkT7Wl 
+
+
+## 下载代码
+
+本repo已经提供了repo创建时下载好的代码。下载方法供参考。
+
+### 下载图片
 
 **需要中国大陆ip**
 
@@ -24,7 +33,7 @@ imgs/
 ```
 
 
-## 下载css与js
+### 下载css与js
 
 **需要中国大陆ip**
 
@@ -36,12 +45,12 @@ curl https://jsb.notebookvip.cn/jsb-wap/
 
 使用正确的`runtime-url`，运行以下命令(或者使用`./run.sh`)下载记事本代码。
 
-···bash
+```bash
 python3 download_notebookvip_assets.py \
   --runtime-url "https://jsb.notebookvip.cn/jsb-wap/static/js/runtime.2c059b5cf33ac3cb1752.js" \
   --out jsb \
   --public-path "/jsb-wap/"
-···
+````
 
 ## 本地试玩
 
@@ -52,6 +61,7 @@ python3 -m http.server 8000
 
 网站在`http://127.0.0.1:8000/jsb-wap/`即可访问。
 
+打开浏览器控制台，在console粘贴代码，即可本地体验记事本界面。
 
 初始化
 
