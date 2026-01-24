@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><title></title><meta name=format-detection content="telephone=no"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><meta name=referrer content=never><meta http-equiv=pragma content=no-cache><meta http-equiv=cache-control content=no-cache><meta http-equiv=expires content=0><link rel=icon href=/jsb-files/favicon.ico type=image/png><link rel=stylesheet href=/jsb-wap/static/ctyunplayer/ctyunplayer.css><script src=/jsb-wap/static/ctyunplayer/ctyunplayer.js></script><script>// Fix: 判断app环境， ios系统下需要加载cordova，及相关的插件脚本
+        var client_info = navigator.userAgent.toLowerCase();
+        var head = document.querySelector('head')
+        // const base = ''
+        const base = '/jsb-wap'
+        if (client_info.indexOf('iphone') > -1) {
+            [base + '/static/cordova.js',
+            base + '/static/plugins/org.apache.cordova.device/www/device.js',
+            base + '/static/plugins/org.apache.cordova.console/www/logger.js',
+            base + '/static/plugins/CustomPlugin.js'].forEach(item => {
+                var script = document.createElement('script')
+
+                script.setAttribute('src', item)
+
+                head.appendChild(script)
+            })
+        }</script><link href=/jsb-wap/static/css/styles~app.347ed74f642dae60b5f6.css rel=stylesheet><link href=/jsb-wap/static/css/app.9e1f7d295adbdfecc17c.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/jsb-wap/dll/vendor-dll.72a7741e3650ad3a0ad8.js></script><script type=text/javascript src=/jsb-wap/static/js/runtime.2c059b5cf33ac3cb1752.js></script><script type=text/javascript src=/jsb-wap/static/js/13.f19b30c119d4d80aa1a0.js></script><script type=text/javascript src=/jsb-wap/static/js/11.fd39655f86fc9a763440.js></script></body></html>
