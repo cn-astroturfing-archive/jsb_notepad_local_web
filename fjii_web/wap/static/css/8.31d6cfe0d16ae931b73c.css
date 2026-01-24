@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><title></title><meta name="robots" content="noindex, nofollow"><meta name=format-detection content="telephone=no"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><meta name=referrer content=never><meta http-equiv=pragma content=no-cache><meta http-equiv=cache-control content=no-cache><meta http-equiv=expires content=0><link rel=icon href=https://mt.fjii.com/wap/favicon.png type=image/png><script>// Fix: 判断app环境， ios系统下需要加载cordova，及相关的插件脚本
+        var client_info = navigator.userAgent.toLowerCase();
+        var head = document.querySelector('head')
+        
+        if (client_info.indexOf('iphone') > -1) {
+            ['/wap/static/cordova.js',
+            '/wap/static/plugins/org.apache.cordova.device/www/device.js',
+            '/wap/static/plugins/org.apache.cordova.console/www/logger.js',
+            '/wap/static/plugins/CustomPlugin.js'].forEach(item => {
+                var script = document.createElement('script')
+
+                script.setAttribute('src', item)
+
+                head.appendChild(script)
+            })
+        }</script><link href=/wap/static/css/styles~app.2cc076dab96880c17639.css rel=stylesheet><link href=/wap/static/css/app.c760b20021af8ee80a6d.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/wap/dll/vendor-dll.cb8e53a95bf5451990db.js></script><script type=text/javascript src=/wap/static/js/runtime.4fd41322fab2a84ecc89.js></script><script type=text/javascript src=/wap/static/js/13.0534d83e1f31be0bd26d.js></script><script type=text/javascript src=/wap/static/js/11.22421770a31c56adf34f.js></script></body></html>

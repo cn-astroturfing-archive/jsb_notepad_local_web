@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://mt.fjii.com/ysxy/grxx.html -->
+<html data-dpr="1" style="font-size: 54px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>记事本已收集个人信息清单</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script>
+        !function (N, M) {
+          function L() {
+            var a = I.getBoundingClientRect().width;
+            a / F > 540 && (a = 540 * F);
+            var d = a / 10;
+            I.style.fontSize = d + "px", D.rem = N.rem = d
+          }
+          var K, J = N.document,
+            I = J.documentElement,
+            H = J.querySelector('meta[name="viewport"]'),
+            G = J.querySelector('meta[name="flexible"]'),
+            F = 0,
+            E = 0,
+            D = M.flexible || (M.flexible = {});
+          if (H) {
+            console.warn("将根据已有的meta标签来设置缩放比例");
+            var C = H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);
+            C && (E = parseFloat(C[1]), F = parseInt(1 / E))
+          } else {
+            if (G) {
+              var B = G.getAttribute("content");
+              if (B) {
+                var A = B.match(/initial\-dpr=([\d\.]+)/),
+                  z = B.match(/maximum\-dpr=([\d\.]+)/);
+                A && (F = parseFloat(A[1]), E = parseFloat((1 / F).toFixed(2))), z && (F = parseFloat(z[1]), E = parseFloat(
+                  (1 / F).toFixed(2)))
+              }
+            }
+          }
+          if (!F && !E) {
+            var y = N.navigator.userAgent,
+              x = (!!y.match(/android/gi), !!y.match(/iphone/gi)),
+              w = x && !!y.match(/OS 9_3/),
+              v = N.devicePixelRatio;
+            F = x && !w ? v >= 3 && (!F || F >= 3) ? 3 : v >= 2 && (!F || F >= 2) ? 2 : 1 : 1, E = 1 / F
+          }
+          if (I.setAttribute("data-dpr", F), !H) {
+            if (H = J.createElement("meta"), H.setAttribute("name", "viewport"), H.setAttribute("content",
+                "viewport-fit=cover,initial-scale=" + E + ", maximum-scale=" + E + ", minimum-scale=" + E +
+                ", user-scalable=no"), I.firstElementChild) {
+              I.firstElementChild.appendChild(H)
+            } else {
+              var u = J.createElement("div");
+              u.appendChild(H), J.write(u.innerHTML)
+            }
+          }
+          N.addEventListener("resize", function () {
+            clearTimeout(K), K = setTimeout(L, 300)
+          }, !1), N.addEventListener("pageshow", function (b) {
+            b.persisted && (clearTimeout(K), K = setTimeout(L, 300))
+          }, !1), "complete" === J.readyState ? J.body.style.fontSize = 12 * F + "px" : J.addEventListener(
+            "DOMContentLoaded",
+            function () {
+              J.body.style.fontSize = 12 * F + "px"
+            }, !1), L(), D.dpr = N.dpr = F, D.refreshRem = L, D.rem2px = function (d) {
+            var c = parseFloat(d) * this.rem;
+            return "string" == typeof d && d.match(/rem$/) && (c += "px"), c
+          }, D.px2rem = function (d) {
+            var c = parseFloat(d) / this.rem;
+            return "string" == typeof d && d.match(/px$/) && (c += "rem"), c
+          }
+        }(window, window.lib || (window.lib = {}));
+  
+    </script>
+	<style type="text/css">
+	   .indent:before{
+	       content: "　　"
+	   }
+	   .indent4:before{
+	       content: "　　"
+	   }
+	   .underline{
+	       text-decoration: underline;
+	   }
+	   .red{
+	       color: red;
+	   }
+	   p{
+	       line-height: 25px;
+		   font-size: 16px;
+	   }
+
+	</style>
+  </head>
+  <body style="padding: 0px 10px; font-size: 12px;">
+
+	<h3 style="text-align:center; padding: 20px 0px; font-size: 28px;">记事本已收集个人信息清单</h3>
+	<p><strong>一、登录场景&nbsp;</strong></p>
+    <p class="indent">使用信息：账号、密码、手机号码</p>
+    <p class="indent">信息类型：个人基本信息</p>
+    <p class="indent">使用目的：用于登录记事本APP</p>
+    <p class="indent">收集方式：用户主动提供</p>
+
+	<p><strong>二、微博内容分享场景</strong></p>
+    <p class="indent">使用信息：IMEI、IMSI、Android ID、硬件序列号、设备型号、操作系统版本、IP、MAC地址</p>
+    <p class="indent">信息类型：设备信息</p>
+    <p class="indent">使用目的：帮助用户分享内容到微博</p>
+    <p class="indent">收集方式：SDK本机采集</p>
+
+	<p><strong>三、微博授权登录场景 </strong></p>
+    <p class="indent">使用信息：IMEI、IMSI、Android ID、硬件序列号、设备型号、操作系统版本、IP、MAC地址</p>
+    <p class="indent">信息类型：设备信息</p>
+    <p class="indent">使用目的：帮助微博进行微博账号授权登录</p>
+    <p class="indent">收集方式：SDK本机采集</p>
+
+    <p><strong>四、账号 </strong></p>
+    <p class="indent">使用目的：用于登录记事本APP</p>
+    <p class="indent">使用场景：用户注册、登录</p>
+    <p class="indent">收集情况：用户提供，已收集<span id="username_count">0</span>条</p>
+    <p class="indent">信息内容：<span id="username"></span></p>
+
+    <p><strong>五、密码 </strong></p>
+    <p class="indent">使用目的：用于登录记事本APP</p>
+    <p class="indent">使用场景：用户注册、登录</p>
+    <p class="indent">收集情况：用户提供，已收集1条</p>
+    <p class="indent">信息内容：*****</p>
+
+    <p><strong>六、手机号 </strong></p>
+    <p class="indent">使用目的：用于注册创建账号和登录</p>
+    <p class="indent">使用场景：用户注册、登录</p>
+    <p class="indent">收集情况：用户提供，已收集<span id="telephone_count">0</span>条</p>
+    <p class="indent">信息内容：<span id="telephone"></span></p>
+
+    <p><strong>七、姓名 </strong></p>
+    <p class="indent">使用目的：完善用户信息</p>
+    <p class="indent">使用场景：展示用户信息、水印显示</p>
+    <p class="indent">收集情况：用户提供，已收集<span id="name_count">0</span>条</p>
+    <p class="indent">信息内容：<span id="name"></span></p>
+
+    <p><strong>八、单位 </strong></p>
+    <p class="indent">使用目的：完善用户信息</p>
+    <p class="indent">使用场景：参与单位积分活动</p>
+    <p class="indent">收集情况：用户提供，已收集<span id="unitName_count">0</span>条</p>
+    <p class="indent">信息内容：<span id="unitName"></span></p>
+
+
+    
+	
+    
+    <script type="text/javascript">
+        function getUrlParams(url,name) {
+            if (!url || url.indexOf('?') < 0) { return ""; }
+
+            url = url.substr(url.indexOf('?')+1);
+            url = url.split('&');
+            var name = name || '';
+            var nameres;
+            // 获取全部参数及其值
+            for(var i=0;i<url.length;i++) {
+                var info = url[i].split('=');
+                var obj = {};
+                obj[info[0]] = decodeURI(info[1]);
+                url[i] = obj;
+            }
+            // 如果传入一个参数名称，就匹配其值
+            if (name) {
+                for(var i=0;i<url.length;i++) {
+                    for (const key in url[i]) {
+                        if (key == name) {
+                            nameres = url[i][key];
+                        }
+                    }
+                }
+            } else {
+                nameres = url;
+            }
+            // 返回结果
+            return nameres;
+        };
+        
+        window.onload = function(){ 
+            var currentUrl = window.location.href;
+            var personalInfo = {
+                username:getUrlParams(currentUrl,"username"),
+                telephone:getUrlParams(currentUrl,"telephone"),
+                name:getUrlParams(currentUrl,"name"),
+                unitName:getUrlParams(currentUrl,"unitName"),
+                regionName:getUrlParams(currentUrl,"regionName")
+            }
+
+            for(var k in personalInfo) {
+                var val = !!personalInfo[k] ? personalInfo[k] : "";
+
+                document.getElementById(k).innerText = val;
+                document.getElementById(k+"_count").innerText = !!val ? 1 : 0;
+            }
+        }
+    </script>
+
+
+
+
+
+</body></html>
