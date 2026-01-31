@@ -1,8 +1,16 @@
 # README
 
+**This repository exposes the user interface of Jishiben (记事本), an app used by the Chinese government to organize astroturfing campaigns. The app has been deployed nationwide and primarily supports domestic propaganda efforts. In short, selected government employees are required to complete tasks (reposting, commenting or liking posts on Chinese news sites and major social media platforms) issued by the Cyberspace Administration of China (and its local branches) through Jishiben. The platform is gamified: individuals and teams compete on metrics such as task completion rates and total tasks completed.**
+
+**The app is highly secretive. For example, the website used to distribute it masqueraded as an online laptop store. Tasks are only available for 24–48 hours; after that, their details disappear automatically. In addition, the app can only be accessed from an IP address located in mainland China.**
+
 关于网评员专用app记事本的介绍，请参考
 
 https://hackmd.io/@g_aydPBHS1m5-pMA-nIfjw/HkXzPkT7Wl 
+
+[官方用户教学视频](https://www.youtube.com/watch?v=WXz2sOs5RZ0)
+
+[官方管理员教学视频](https://www.youtube.com/watch?v=t7r5-Buc1xw)
 
 
 ## 下载代码
