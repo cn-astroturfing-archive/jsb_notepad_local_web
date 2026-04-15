@@ -1,4 +1,4 @@
-python3 ~/download_notebookvip_assets.py \
-  --runtime-url "https://jsb.notebookvip.cn/jsb-wap/static/js/runtime.d6390d3ff74ff4e0029d.js" \
-  --out jsb \
+python3 download_notebookvip_code_assets.py  \
+  --out jsb_web \
   --public-path "/jsb-wap/"
+

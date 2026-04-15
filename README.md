@@ -17,14 +17,27 @@ https://hackmd.io/@g_aydPBHS1m5-pMA-nIfjw/HkXzPkT7Wl
 
 本repo已经提供了repo创建时下载好的代码。下载方法供参考。
 
+分别下载图片和代码，下载后合并即可。
+
 ### 下载图片
 
 **需要中国大陆ip**
 
-运行
+从js代码中提取资源列表的脚本
 
 ```bash
-python3 download_images_keep_path.py --out imgs
+find . -type f -name "*.js" -print0 |
+xargs -0 perl -ne '
+  while (m{(?:https?:)?//[^"'\'' <>()]*/[^/"'\'' <>()]+\.(?:png|jpe?g|gif|webp|svg|mp4|mp3|m4a|wav|ogg|webm|mov|aac)(?:\?[^"'\'' <>()]*)?|/[^"'\'' <>()]*/[^/"'\'' <>()]+\.(?:png|jpe?g|gif|webp|svg|mp4|mp3|m4a|wav|ogg|webm|mov|aac)(?:\?[^"'\'' <>()]*)?|\.\.?/[^"'\'' <>()]*/[^/"'\'' <>()]+\.(?:png|jpe?g|gif|webp|svg|mp4|mp3|m4a|wav|ogg|webm|mov|aac)(?:\?[^"'\'' <>()]*)?|[^"'\'' <>()]*/[^/"'\'' <>()]+\.(?:png|jpe?g|gif|webp|svg|mp4|mp3|m4a|wav|ogg|webm|mov|aac)(?:\?[^"'\'' <>()]*)?}ig) {
+    print "$ARGV\t$&\n";
+  }
+' | sort -u
+```
+
+运行以下脚本(包含资源列表)
+
+```bash
+python3 download_notebookvip_img_assets.py --out imgs
 ```
 
 下载结果保留url文件夹结构
@@ -45,24 +58,17 @@ imgs/
 
 **需要中国大陆ip**
 
-`runtime-url`来自运行以下指令得到的html
+运行以下命令(或者使用`./run.sh`)下载记事本代码。
 
 ```bash
-curl https://jsb.notebookvip.cn/jsb-wap/
-```
-
-使用正确的`runtime-url`，运行以下命令(或者使用`./run.sh`)下载记事本代码。
-
-```bash
-python3 download_notebookvip_assets.py \
-  --runtime-url "https://jsb.notebookvip.cn/jsb-wap/static/js/runtime.d6390d3ff74ff4e0029d.js" \
-  --out jsb \
+python3 download_notebookvip_code_assets.py  \
+  --out  jsb_web \
   --public-path "/jsb-wap/"
 ````
 
 ## 本地试玩
 
-在包含`jsb_web`目录的目录中，运行python server
+`jsb_web`目录中，运行python server
 ```bash
 python3 -m http.server 8000
 ```
