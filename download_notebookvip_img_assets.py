@@ -70,6 +70,7 @@ URLS = [
     "https://jsb.notebookvip.cn/jsb-wap/static/img/20231009_banner.8233434.png",
     "https://jsb.notebookvip.cn/jsb-wap/static/img/baidu.2edb6eb.png",
     "https://jsb.notebookvip.cn/jsb-wap/static/img/banner1.5db8dd7.png",
+    "https://jsb.notebookvip.cn/jsb-wap/static/img/bg.bdb2daf.png",
     "https://jsb.notebookvip.cn/jsb-wap/static/img/capture_1.4793ac0.png",
     "https://jsb.notebookvip.cn/jsb-wap/static/img/capture_2.69fab31.png",
     "https://jsb.notebookvip.cn/jsb-wap/static/img/capture_3.fb225f5.png",
